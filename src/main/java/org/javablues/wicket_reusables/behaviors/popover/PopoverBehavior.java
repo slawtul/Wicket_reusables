@@ -1,4 +1,4 @@
-package org.javablues.wicket_reusables.behaviors.popovers;
+package org.javablues.wicket_reusables.behaviors.popover;
 
 import org.apache.wicket.Component;
 import org.apache.wicket.behavior.Behavior;
@@ -6,24 +6,24 @@ import org.apache.wicket.markup.ComponentTag;
 import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.head.OnLoadHeaderItem;
 
-public class PopoversBehavior extends Behavior {
+public class PopoverBehavior extends Behavior {
 
     private String title;
     private String dataContent;
     private DataTrigger dataTrigger = DataTrigger.HOVER;
     private DataPlacement dataPlacement = DataPlacement.RIGHT;
 
-    public PopoversBehavior(String title, String dataContent) {
+    public PopoverBehavior(String title, String dataContent) {
         this.title = title;
         this.dataContent = dataContent;
     }
 
-    public PopoversBehavior(String title, String dataContent, DataTrigger dataTrigger) {
+    public PopoverBehavior(String title, String dataContent, DataTrigger dataTrigger) {
         this(title, dataContent);
         this.dataTrigger = dataTrigger;
     }
 
-    public PopoversBehavior(String title, String dataContent, DataTrigger dataTrigger, DataPlacement dataPlacement) {
+    public PopoverBehavior(String title, String dataContent, DataTrigger dataTrigger, DataPlacement dataPlacement) {
         this(title, dataContent, dataTrigger);
         this.dataPlacement = dataPlacement;
     }

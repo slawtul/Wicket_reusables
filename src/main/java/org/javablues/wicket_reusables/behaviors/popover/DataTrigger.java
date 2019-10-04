@@ -1,4 +1,4 @@
-package org.javablues.wicket_reusables.behaviors.popovers;
+package org.javablues.wicket_reusables.behaviors.popover;
 
 public enum DataTrigger {
 
