@@ -6,7 +6,7 @@ Wicket 8.x reusables panels and behaviors for Bootstrap 4.x components
 
 __PopoversBehavior (based on popper.js)__
 
-    > PopoversBehavior relies on the 3rd party library Popper.js for positioning. __You must include popper.min.js before bootstrap.js__
+> PopoversBehavior relies on the 3rd party library Popper.js for positioning. __You must include popper.min.js before bootstrap.js__
     
 ```java
 // Examples
@@ -21,7 +21,7 @@ button.add(new PopoversBehavior("Register user", "Please click to register user"
 
 __Panel name...__
 
-    > Description
+> Description...
 
 ```java
 // Examples
@@ -32,7 +32,7 @@ __Panel name...__
 ## 
 #### Author
 
-Linkedin: [https://www.linkedin.com/in/slawektuleja/]()
+Linkedin: [https://www.linkedin.com/in/slawektuleja/](https://www.linkedin.com/in/slawektuleja/)
 
 #### License
 
