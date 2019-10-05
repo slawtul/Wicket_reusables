@@ -6,8 +6,6 @@ import org.apache.wicket.markup.html.form.FormComponent;
 
 public class AsteriskBehavior extends Behavior {
 
-    private static final String ASTERISK_SIGN = "<span class='asterisk-sign'>*</span>";
-
     @Override
     public void beforeRender(Component component) {
         if (!(component instanceof FormComponent)) {
@@ -16,7 +14,11 @@ public class AsteriskBehavior extends Behavior {
         if (!((FormComponent<?>) component).isRequired()) {
             return;
         }
-        component.getResponse().write(ASTERISK_SIGN);
+        component.getResponse().write(getAsteriskMarkup());
         super.beforeRender(component);
+    }
+
+    protected String getAsteriskMarkup() {
+        return "<span class='asterisk-sign'>*</span>";
     }
 }
