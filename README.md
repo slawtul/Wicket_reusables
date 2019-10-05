@@ -18,7 +18,7 @@ button.add(new PopoverBehavior("Register user", "Please click to register user",
 
 __AsteriskBehavior__
 
-> Adds '<span class='asterisk-sign'>*</span>' sign to required fields. Please add .asterisk-sign { color: red }
+> Adds '<span class='asterisk-sign'>*</span>' entry to required fields. Please add .asterisk-sign { color: red }
 > to css file. 
     
 ```java
