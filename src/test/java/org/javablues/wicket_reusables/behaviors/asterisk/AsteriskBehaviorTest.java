@@ -7,13 +7,14 @@ import org.apache.wicket.markup.html.panel.Panel;
 import org.javablues.wicket_reusables.WicketBaseTest;
 import org.junit.Test;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class AsteriskBehaviorTest extends WicketBaseTest {
 
     @Test
-    public void requiredFieldShouldHasAsteriskSign() {
-        TestPanel panel = new TestPanel("testPanel");
+    public void asteriskSignRenderedForRequiredField() {
+        TestPanel panel = new TestPanel("panel");
 
         TextField textField = new TextField("field");
         textField.setRequired(true);
@@ -23,7 +24,22 @@ public class AsteriskBehaviorTest extends WicketBaseTest {
         tester.startComponentInPage(panel);
 
         String renderedMarkup = ComponentRenderer.renderComponent(panel).toString();
-        assertTrue("Wrong rendered markup", renderedMarkup.contains("<span class='asterisk-sign'>*</span>"));
+        assertTrue("Rendered markup does not contain asterisk sign", renderedMarkup.contains("<span class='asterisk-sign'>*</span>"));
+    }
+
+    @Test
+    public void asteriskSignNotRenderedForRegularField() {
+        TestPanel panel = new TestPanel("panel");
+
+        TextField textField = new TextField("field");
+        textField.setRequired(false);
+        textField.add(new AsteriskBehavior());
+
+        panel.add(textField);
+        tester.startComponentInPage(panel);
+
+        String renderedMarkup = ComponentRenderer.renderComponent(panel).toString();
+        assertFalse("Rendered markup contains asterisk sign", renderedMarkup.contains("<span class='asterisk-sign'>*</span>"));
     }
 
     private static class TestPanel extends Panel {
