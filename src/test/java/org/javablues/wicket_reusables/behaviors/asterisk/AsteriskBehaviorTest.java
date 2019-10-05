@@ -24,7 +24,7 @@ public class AsteriskBehaviorTest extends WicketBaseTest {
         tester.startComponentInPage(panel);
 
         String renderedMarkup = ComponentRenderer.renderComponent(panel).toString();
-        assertTrue("Rendered markup does not contain asterisk sign", renderedMarkup.contains("<span class='asterisk-sign'>*</span>"));
+        assertTrue("Rendered markup does not contain correct asterisk entry", renderedMarkup.contains("<span class='asterisk-sign'>*</span>"));
     }
 
     @Test
@@ -39,7 +39,7 @@ public class AsteriskBehaviorTest extends WicketBaseTest {
         tester.startComponentInPage(panel);
 
         String renderedMarkup = ComponentRenderer.renderComponent(panel).toString();
-        assertFalse("Rendered markup contains asterisk sign", renderedMarkup.contains("<span class='asterisk-sign'>*</span>"));
+        assertFalse("Rendered markup contains incorrect asterisk entry", renderedMarkup.contains("<span class='asterisk-sign'>*</span>"));
     }
 
     private static class TestPanel extends Panel {
