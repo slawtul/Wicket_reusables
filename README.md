@@ -46,4 +46,4 @@ Linkedin: [https://www.linkedin.com/in/slawektuleja/](https://www.linkedin.com/i
 
 #### License
 
-You can use this package freely in any project: free or commercial
+You can use this software freely in any project: free or commercial
