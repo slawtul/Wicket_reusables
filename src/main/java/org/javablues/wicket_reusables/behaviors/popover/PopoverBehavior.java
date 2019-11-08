@@ -4,7 +4,7 @@ import org.apache.wicket.Component;
 import org.apache.wicket.behavior.Behavior;
 import org.apache.wicket.markup.ComponentTag;
 import org.apache.wicket.markup.head.IHeaderResponse;
-import org.apache.wicket.markup.head.OnLoadHeaderItem;
+import org.apache.wicket.markup.head.OnDomReadyHeaderItem;
 
 public class PopoverBehavior extends Behavior {
 
@@ -31,7 +31,7 @@ public class PopoverBehavior extends Behavior {
     @Override
     public void renderHead(Component component, IHeaderResponse response) {
         super.renderHead(component, response);
-        response.render(OnLoadHeaderItem.forScript(enablePopovers()));
+        response.render(OnDomReadyHeaderItem.forScript(enablePopovers()));
     }
 
     @Override
