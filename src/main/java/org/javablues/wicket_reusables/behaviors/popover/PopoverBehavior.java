@@ -38,7 +38,7 @@ public class PopoverBehavior extends Behavior {
     public void onComponentTag(Component component, ComponentTag tag) {
         super.onComponentTag(component, tag);
         tag.append("data-toggle", "popover", "");
-        tag.append("title", title, " ");
+        tag.append("title", title, "");
         tag.append("data-content", dataContent, "");
         tag.append("data-trigger", dataTrigger.toString(), "");
         tag.append("data-placement", dataPlacement.toString(), "");
