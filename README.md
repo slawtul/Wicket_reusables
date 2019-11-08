@@ -2,6 +2,9 @@
 
 Wicket 8.x reusables panels and behaviors for Bootstrap 4.x components
 
+- [x] Beta version - not ready for production yet
+- [ ] Configure to push to maven central repository  
+
 ## Behaviors
 
 __PopoverBehavior__
@@ -10,13 +13,15 @@ __PopoverBehavior__
     
 ```java
 // Example 1
+// Popover default values: trigger='hover', placement='right'
 Button button = new Button("register");
-button.add(new PopoverBehavior("Register user", "Please click to register user"); // Defaults [trigger: hover, placement: right]
+button.add(new PopoverBehavior("Register user", "Please click to register user");
 ```
 ```java
 // Example 2
 Button button = new Button("register");
-button.add(new PopoverBehavior("Register user", "Please click to register user", DataTrigger.CLICK, DataPlacement.BOTTOM));
+button.add(new PopoverBehavior("Register user", "Please click to register user",
+            DataTrigger.CLICK, DataPlacement.BOTTOM));
 ```
 
 __AsteriskBehavior__
