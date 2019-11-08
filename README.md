@@ -9,24 +9,60 @@ __PopoverBehavior__
 > Relies on the 3rd party library Popper.js for positioning. __You must include popper.min.js before bootstrap.js__
     
 ```java
+// Example 1
 Button button = new Button("register");
 button.add(new PopoverBehavior("Register user", "Please click to register user"); // Defaults [trigger: hover, placement: right]
-
+```
+```java
+// Example 2
 Button button = new Button("register");
 button.add(new PopoverBehavior("Register user", "Please click to register user", DataTrigger.CLICK, DataPlacement.BOTTOM));
 ```
 
 __AsteriskBehavior__
 
-> Adds '<span class='asterisk-sign'>*</span>' entry to required fields. Please add .asterisk-sign { color: red }
+> Adds &lt;span class='asterisk-sign'&gt;*&lt;/span&gt; html entry to required fields. Please add .asterisk-sign { color: red }
 > to css file. 
     
 ```java
+// Example
 TextField field = new TextField("username");
 field.setRequired(true);
 field.add(new AsteriskBehavior());
 ```
 
+__Select2Behavior__
+
+> Adds [Select2](https://select2.org/) javascript plugin for a customizable select box.
+
+```java
+// Example 1
+List<String> fruits = Arrays.asList("apple", "strawberry", "watermelon");
+DropDownChoice<String> selectBox = new DropDownChoice<>("fruits", new Model(), fruits));
+selectBox.add(new Select2Behavior());
+```
+
+```java
+// Example 2
+List<String> fruits = Arrays.asList("apple", "strawberry", "watermelon");
+DropDownChoice<String> selectBox = new DropDownChoice<>("fruits", new Model(), fruits));
+selectBox.add(new Select2Behavior() {
+
+    @Override
+    protected Select2Options createSelect2Options(Component component) {
+        return new Select2Options()         
+                .withWidth("200")
+                .withDropdownAutoWidth(true);
+    }
+
+    @Override
+    protected Select2OnEvent createSelect2OnEvent(Component component) {
+        return new Select2OnEvent()
+                .onEvent("select2:select", "function(event) { console.log(event); }")
+                .onEvent(Select2Events.SELECT2_OPENING, "function(event) { console.log(event); }");
+    }
+});
+```
 
 ## Panels
 
@@ -46,4 +82,4 @@ Linkedin: [https://www.linkedin.com/in/slawektuleja/](https://www.linkedin.com/i
 
 #### License
 
-You can use this software freely in any project: free or commercial
+You can use this software freely in any free or commercial project
