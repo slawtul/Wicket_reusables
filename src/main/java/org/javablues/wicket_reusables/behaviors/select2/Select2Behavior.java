@@ -18,7 +18,7 @@ public class Select2Behavior extends Behavior {
         }
         response.render(OnDomReadyHeaderItem.forScript(appendScript(component)));
         response.render(CssHeaderItem.forReference(new ContextRelativeResourceReference("webjars/select2/4.0.10/css/select2.css")));
-        response.render(JavaScriptHeaderItem.forReference(new ContextRelativeResourceReference("webjars/select2/4.0.10/js/select2.min.js")));
+        response.render(JavaScriptHeaderItem.forReference(new ContextRelativeResourceReference("webjars/select2/4.0.10/js/select2.full.min.js")));
     }
 
     protected Select2Options createSelect2Options(Component component) {
