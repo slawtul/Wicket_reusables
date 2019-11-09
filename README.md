@@ -1,9 +1,14 @@
 # Wicket reusables
 
-Wicket 8.x reusables panels and behaviors for Bootstrap 4.x components
+Wicket 8.x reusables panels and behaviors for jQuery and Bootstrap 4.x components
 
 - [x] Beta version - not ready for production yet
-- [ ] Configure to push to maven central repository  
+- [ ] Configure to push to maven central repository
+
+Behaviors
+- [x] [Popover](https://getbootstrap.com/docs/4.0/components/popovers/)
+- [x] Asterisk
+- [ ] [Select2](https://select2.org/)
 
 ## Behaviors
 
@@ -13,7 +18,7 @@ __PopoverBehavior__
     
 ```java
 // Example 1
-// Popover default values: trigger='hover', placement='right'
+// Popover default values: data-trigger='hover', data-placement='right'
 Button button = new Button("register");
 button.add(new PopoverBehavior("Register user", "Please click to register user");
 ```
@@ -43,14 +48,14 @@ __Select2Behavior__
 ```java
 // Example 1
 List<String> fruits = Arrays.asList("apple", "strawberry", "watermelon");
-DropDownChoice<String> selectBox = new DropDownChoice<>("fruits", new Model(), fruits));
+DropDownChoice<String> selectBox = new DropDownChoice<>("fruits", new Model<>(), fruits);
 selectBox.add(new Select2Behavior());
 ```
 
 ```java
 // Example 2
 List<String> fruits = Arrays.asList("apple", "strawberry", "watermelon");
-DropDownChoice<String> selectBox = new DropDownChoice<>("fruits", new Model(), fruits));
+DropDownChoice<String> selectBox = new DropDownChoice<>("fruits", new Model<>(), fruits);
 selectBox.add(new Select2Behavior() {
 
     @Override
