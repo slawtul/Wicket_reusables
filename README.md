@@ -9,6 +9,7 @@ Behaviors
 - [x] [Popover](https://getbootstrap.com/docs/4.0/components/popovers/)
 - [x] Asterisk
 - [ ] [Select2](https://select2.org/)
+- [ ] [Tooltip](https://getbootstrap.com/docs/4.0/components/tooltips/)
 
 ## Behaviors
 
