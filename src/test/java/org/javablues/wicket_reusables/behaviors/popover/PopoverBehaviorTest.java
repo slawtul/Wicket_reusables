@@ -28,14 +28,10 @@ public class PopoverBehaviorTest extends WicketBaseTest {
         List<TagTester> dataToggle = TagTester.createTagsByAttribute(actualMarkup, "data-toggle", "popover", false);
         List<TagTester> title = TagTester.createTagsByAttribute(actualMarkup, "title", "Register user", false);
         List<TagTester> dataContent = TagTester.createTagsByAttribute(actualMarkup, "data-content", "Please click to register user", false);
-        List<TagTester> dataTrigger = TagTester.createTagsByAttribute(actualMarkup, "data-trigger", "hover", false);
-        List<TagTester> dataPlacement = TagTester.createTagsByAttribute(actualMarkup, "data-placement", "right", false);
 
         Assert.assertEquals(1, dataToggle.size());
         Assert.assertEquals(1, title.size());
         Assert.assertEquals(1, dataContent.size());
-        Assert.assertEquals(1, dataTrigger.size());
-        Assert.assertEquals(1, dataPlacement.size());
 
         Assert.assertEquals("input", title.get(0).getName());
     }
@@ -44,7 +40,11 @@ public class PopoverBehaviorTest extends WicketBaseTest {
     public void popoverRenderedWithUserSettings() {
         Panel panel = createTestPanel("panelWithButton", "<wicket:panel><input type=\"submit\" wicket:id=\"register\"/></wicket:panel>");
         Button button = new Button("register");
-        button.add(new PopoverBehavior("Register user", "Please click to register user", DataTrigger.CLICK, DataPlacement.BOTTOM));
+        button.add(PopoverBehavior.builder()
+                .title("Register user")
+                .content("Please click to register user")
+                .trigger(Trigger.CLICK)
+                .placement(Placement.BOTTOM).build());
 
         panel.add(button);
         tester.startComponentInPage(panel);
@@ -67,7 +67,10 @@ public class PopoverBehaviorTest extends WicketBaseTest {
     public void popoverRenderedWithEscapedText() {
         Panel panel = createTestPanel("panelWithButton", "<wicket:panel><input type=\"submit\" wicket:id=\"register\"/></wicket:panel>");
         Button button = new Button("register");
-        button.add(new PopoverBehavior("Register user <>", "Please click to register user <>"));
+        button.add(PopoverBehavior.builder()
+                .title("Register user <>")
+                .content("Please click to register user <>")
+                .build());
 
         panel.add(button);
         tester.startComponentInPage(panel);
@@ -77,8 +80,7 @@ public class PopoverBehaviorTest extends WicketBaseTest {
                 .append("<span wicket:id=\"panelWithButton\">")
                 .append("<wicket:panel>")
                 .append("<input type=\"submit\" wicket:id=\"register\" name=\"panelWithButton:register\" id=\"register1\" ")
-                .append("data-toggle=\"popover\" title=\"Register user &lt;&gt;\" data-content=\"Please click to register user &lt;&gt;\" ")
-                .append("data-trigger=\"hover\" data-placement=\"right\"/>")
+                .append("data-toggle=\"popover\" title=\"Register user &lt;&gt;\" data-content=\"Please click to register user &lt;&gt;\"/>")
                 .append("</wicket:panel>")
                 .append("</span>")
                 .toString();

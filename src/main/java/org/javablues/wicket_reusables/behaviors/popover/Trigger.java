@@ -1,8 +1,8 @@
 package org.javablues.wicket_reusables.behaviors.popover;
 
-public enum DataPlacement {
+public enum Trigger {
 
-    RIGHT, LEFT, BOTTOM, TOP;
+    CLICK, HOVER, FOCUS, MANUAL;
 
     @Override
     public String toString() {

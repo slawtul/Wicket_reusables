@@ -24,10 +24,15 @@ Button button = new Button("register");
 button.add(new PopoverBehavior("Register user", "Please click to register user");
 ```
 ```java
-// Example 2
+// Example 2 with Builder
 Button button = new Button("register");
-button.add(new PopoverBehavior("Register user", "Please click to register user",
-            DataTrigger.CLICK, DataPlacement.BOTTOM));
+button.add(PopoverBehavior.builder()
+            .title("Register user")
+            .content("Please click to register user")
+            .trigger(Trigger.CLICK)
+            .placement(Placement.BOTTOM)
+            .animation(false)            
+            .build());
 ```
 
 __AsteriskBehavior__
