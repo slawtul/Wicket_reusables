@@ -1,15 +1,11 @@
 package org.javablues.wicket_reusables.behaviors.popover;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import org.apache.wicket.Component;
 import org.apache.wicket.behavior.Behavior;
 import org.apache.wicket.markup.ComponentTag;
 import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.head.OnDomReadyHeaderItem;
 
-@AllArgsConstructor
-@Builder
 public class PopoverBehavior extends Behavior {
 
     private String title;
@@ -22,10 +18,8 @@ public class PopoverBehavior extends Behavior {
     private Trigger trigger;
     private Placement placement;
 
-    @Builder.Default
-    private boolean animation = true;
-
-    private boolean html = false;
+    private Boolean animation = true;
+    private boolean html;
 
     private int delay;
     private int offset;
@@ -51,6 +45,7 @@ public class PopoverBehavior extends Behavior {
         if (trigger != null) tag.append("data-trigger", trigger.toString(), "");
         if (placement != null) tag.append("data-placement", placement.toString(), "");
         if (selector != null) tag.append("data-selector", selector, "");
+        if (container != null) tag.append("data-container", container, "");
         if (template != null) tag.append("data-template", template, "");
         if (boundary != null) tag.append("data-boundary", boundary, "");
         if (delay != 0) tag.append("data-delay", Integer.toString(delay), "");
@@ -61,5 +56,65 @@ public class PopoverBehavior extends Behavior {
 
     private String enablePopovers() {
         return "$(function () {$('[data-toggle=popover]').popover();})";
+    }
+
+    public PopoverBehavior withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+
+    public PopoverBehavior withContent(String content) {
+        this.content = content;
+        return this;
+    }
+
+    public PopoverBehavior withTemplate(String template) {
+        this.template = template;
+        return this;
+    }
+
+    public PopoverBehavior withSelector(String selector) {
+        this.selector = selector;
+        return this;
+    }
+
+    public PopoverBehavior withContainer(String container) {
+        this.container = container;
+        return this;
+    }
+
+    public PopoverBehavior withBoundary(String boundary) {
+        this.boundary = boundary;
+        return this;
+    }
+
+    public PopoverBehavior withPlacement(Placement placement) {
+        this.placement = placement;
+        return this;
+    }
+
+    public PopoverBehavior withTrigger(Trigger trigger) {
+        this.trigger = trigger;
+        return this;
+    }
+
+    public PopoverBehavior withAnimation(boolean animation) {
+        this.animation = animation;
+        return this;
+    }
+
+    public PopoverBehavior withHtml(boolean html) {
+        this.html = html;
+        return this;
+    }
+
+    public PopoverBehavior withDelay(int delay) {
+        this.delay = delay;
+        return this;
+    }
+
+    public PopoverBehavior withOffset(int offset) {
+        this.offset = offset;
+        return this;
     }
 }
