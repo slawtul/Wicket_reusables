@@ -24,6 +24,9 @@ public class PopoverBehavior extends Behavior {
     private int delay;
     private int offset;
 
+    public PopoverBehavior() {
+    }
+
     public PopoverBehavior(String title, String content) {
         this.title = title;
         this.content = content;

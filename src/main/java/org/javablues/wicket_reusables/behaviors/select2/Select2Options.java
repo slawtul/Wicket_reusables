@@ -32,8 +32,8 @@ public class Select2Options implements Serializable {
     private String dropdownCss = null;
     private String language = null;
     private String placeholder = null;
-    private String containerCssClass = "''";
-    private String dropdownCssClass = "''";
+    private String containerCssClass = null;
+    private String dropdownCssClass = null;
 
     private String templateResult = null;
     private String templateSelection = null;
@@ -51,8 +51,8 @@ public class Select2Options implements Serializable {
         if (!dropdownParent.equalsIgnoreCase("$(document.body)")) options.append("dropdownParent:").append(dropdownParent).append(",");
         if (!width.equalsIgnoreCase("resolve")) options.append("width:'").append(width).append("',");
         if (!theme.equalsIgnoreCase("default")) options.append("theme:'").append(theme).append("',");
-        if (!containerCssClass.equals("''")) options.append("containerCssClass:'").append(containerCssClass).append("',");
-        if (!dropdownCssClass.equals("''")) options.append("dropdownCssClass:'").append(dropdownCssClass).append("',");
+        if (containerCssClass != null) options.append("containerCssClass:'").append(containerCssClass).append("',");
+        if (dropdownCssClass != null) options.append("dropdownCssClass:'").append(dropdownCssClass).append("',");
 
         if (!closeOnSelect) options.append("closeOnSelect:").append(false).append(",");
         if (dropdownAutoWidth) options.append("dropdownAutoWidth:").append(true).append(",");
