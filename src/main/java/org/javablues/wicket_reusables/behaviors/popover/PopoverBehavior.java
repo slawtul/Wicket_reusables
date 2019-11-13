@@ -18,7 +18,7 @@ public class PopoverBehavior extends Behavior {
     private Trigger trigger;
     private Placement placement;
 
-    private Boolean animation = true;
+    private boolean animation = true;
     private boolean html;
 
     private int delay;
