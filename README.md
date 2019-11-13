@@ -9,7 +9,7 @@ Wicket 8.x reusables panels and behaviors for jQuery and Bootstrap 4.x component
 
 | Name                                                              |                                             | Finished              |  
 |-------------------------------------------------------------------|---------------------------------------------|-----------------------|  
-| [Popover](https://getbootstrap.com/docs/4.0/components/popovers/) | ![popover_image](screenshots/popover_0.png) | <ul><li>[x]</li></ul> | 
+| [Popover](https://getbootstrap.com/docs/4.0/components/popovers/) | ![popover_image](screenshots/popover_0.png) | <ul><li>- [x]</li></ul> | 
 | Asterisk                                                          |                                             | <ul><li>[x]</li></ul> |
 | [Select2](https://select2.org/)                                   |                                             | <ul><li>[ ]</li></ul> |
 | [Tooltip](https://getbootstrap.com/docs/4.0/components/tooltips/) |                                             | <ul><li>[ ]</li></ul> |
