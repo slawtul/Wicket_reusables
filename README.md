@@ -5,13 +5,15 @@ Wicket 8.x reusables panels and behaviors for jQuery and Bootstrap 4.x component
 - [x] Beta version - not ready for production yet
 - [ ] Configure to push to maven central repository
 
-Behaviors
-- [x] [Popover](https://getbootstrap.com/docs/4.0/components/popovers/)
-- [x] Asterisk
-- [ ] [Select2](https://select2.org/)
-- [ ] [Tooltip](https://getbootstrap.com/docs/4.0/components/tooltips/)
-
 ## Behaviors
+
+| Name                                                              |                                             | Finished              |  
+|-------------------------------------------------------------------|---------------------------------------------|-----------------------|  
+| [Popover](https://getbootstrap.com/docs/4.0/components/popovers/) | ![popover_image](screenshots/popover_0.png) | <ul><li>[x]</li></ul> | 
+| Asterisk                                                          |                                             | <ul><li>[x]</li></ul> |
+| [Select2](https://select2.org/)                                   |                                             | <ul><li>[ ]</li></ul> |
+| [Tooltip](https://getbootstrap.com/docs/4.0/components/tooltips/) |                                             | <ul><li>[ ]</li></ul> |
+
 
 __PopoverBehavior__
 
