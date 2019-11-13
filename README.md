@@ -10,7 +10,7 @@ Wicket 8.x reusables panels and behaviors for jQuery and Bootstrap 4.x component
 | Name | Status | Example |  
 |:-----|:------:|:-------:|  
 | [Popover](https://getbootstrap.com/docs/4.0/components/popovers/) | :ballot_box_with_check: | ![popover_image](screenshots/popover_0.png) | 
-| Asterisk                                                          | :ballot_box_with_check: | |
+| FieldRequiredBehavior                                             | :ballot_box_with_check: | ![field_required_image](screenshots/field_required_0.png)|
 | [Select2](https://select2.org/)                                   | :clock3: | |
 | [Tooltip](https://getbootstrap.com/docs/4.0/components/tooltips/) | :clock3: | |
 
@@ -38,17 +38,21 @@ button.add(new PopoverBehavior()
             .withOffset(200));
 ```
 
-__AsteriskBehavior__
+---
 
-> Adds &lt;span class='asterisk-sign'&gt;*&lt;/span&gt; html entry to required fields. Please add .asterisk-sign { color: red }
+__FieldRequiredBehavior__
+
+> Adds &lt;span class='field-required'&gt;*&lt;/span&gt; html entry to required fields. Please add .field-required { color: red }
 > to css file. 
     
 ```java
 // Example
 TextField field = new TextField("username");
 field.setRequired(true);
-field.add(new AsteriskBehavior());
+field.add(new FieldRequiredBehavior());
 ```
+
+---
 
 __Select2Behavior__
 

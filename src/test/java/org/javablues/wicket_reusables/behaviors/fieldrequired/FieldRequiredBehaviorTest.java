@@ -1,4 +1,4 @@
-package org.javablues.wicket_reusables.behaviors.asterisk;
+package org.javablues.wicket_reusables.behaviors.fieldrequired;
 
 import org.apache.wicket.core.util.string.ComponentRenderer;
 import org.apache.wicket.markup.html.form.TextField;
@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class AsteriskBehaviorTest extends WicketBaseTest {
+public class FieldRequiredBehaviorTest extends WicketBaseTest {
 
     @Test
     public void asteriskMarkupRenderedForRequiredField() {
@@ -16,8 +16,8 @@ public class AsteriskBehaviorTest extends WicketBaseTest {
 
         TextField textField = new TextField("field");
         textField.setRequired(true);
-        AsteriskBehavior asteriskBehavior = new AsteriskBehavior();
-        textField.add(asteriskBehavior);
+        FieldRequiredBehavior fieldRequired = new FieldRequiredBehavior();
+        textField.add(fieldRequired);
 
         panel.add(textField);
         tester.startComponentInPage(panel);
@@ -26,8 +26,8 @@ public class AsteriskBehaviorTest extends WicketBaseTest {
         String expectedMarkup = new StringBuilder()
                 .append("<span wicket:id=\"panelWithField\">")
                 .append("<wicket:panel>")
-                .append(asteriskBehavior.getAsteriskMarkup())
                 .append("<input type=\"text\" wicket:id=\"field\" value=\"\" name=\"panelWithField:field\"/>")
+                .append(fieldRequired.getMarkup())
                 .append("</wicket:panel>")
                 .append("</span>")
                 .toString();
@@ -40,7 +40,7 @@ public class AsteriskBehaviorTest extends WicketBaseTest {
 
         TextField textField = new TextField("field");
         textField.setRequired(false);
-        textField.add(new AsteriskBehavior());
+        textField.add(new FieldRequiredBehavior());
 
         panel.add(textField);
         tester.startComponentInPage(panel);
