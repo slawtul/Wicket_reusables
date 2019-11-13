@@ -7,13 +7,14 @@ Wicket 8.x reusables panels and behaviors for jQuery and Bootstrap 4.x component
 
 ## Behaviors
 
-| Name                                                              |                                             | Finished              |  
-|-------------------------------------------------------------------|---------------------------------------------|-----------------------|  
+| Name                                                              |                                             | Finished                |  
+|:--- |:-------------------------------------------:|:-----------------------:|  
 | [Popover](https://getbootstrap.com/docs/4.0/components/popovers/) | ![popover_image](screenshots/popover_0.png) | :ballot_box_with_check: | 
-| Asterisk                                                          |                                             | <input type="checkbox" readonly checked></input> |
-| [Select2](https://select2.org/)                                   |                                             | <ul><li>[ ]</li></ul> |
-| [Tooltip](https://getbootstrap.com/docs/4.0/components/tooltips/) |                                             | <ul><li>[ ]</li></ul> |
-
+| Asterisk                                                          | ![popover_image](screenshots/popover_0.png =291x88)                                            | :clock3:                |
+| [Select2](https://select2.org/)                                   |                                             | :ballot_box_with_check: |
+| [Tooltip](https://getbootstrap.com/docs/4.0/components/tooltips/) |                                             | :clock3:                |
+|  &#x2612;  | &#x2611; | :*:\cross:: | :*:\check:: |
+        
 
 __PopoverBehavior__
 
