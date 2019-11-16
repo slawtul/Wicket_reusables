@@ -1,4 +1,4 @@
-package org.javablues.wicket_reusables.shared;
+package org.javablues.wicket_reusables.behaviors.shared;
 
 import org.junit.Test;
 

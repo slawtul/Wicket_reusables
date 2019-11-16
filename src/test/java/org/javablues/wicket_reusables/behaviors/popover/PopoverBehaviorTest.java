@@ -4,6 +4,7 @@ import org.apache.wicket.core.util.string.ComponentRenderer;
 import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.javablues.wicket_reusables.WicketBaseTest;
+import org.javablues.wicket_reusables.behaviors.shared.Placement;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

@@ -1,4 +1,4 @@
-package org.javablues.wicket_reusables.behaviors.popover;
+package org.javablues.wicket_reusables.behaviors.shared;
 
 public enum Placement {
 

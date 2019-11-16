@@ -5,6 +5,7 @@ import org.apache.wicket.behavior.Behavior;
 import org.apache.wicket.markup.ComponentTag;
 import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.head.OnDomReadyHeaderItem;
+import org.javablues.wicket_reusables.behaviors.shared.Placement;
 
 public class PopoverBehavior extends Behavior {
 
