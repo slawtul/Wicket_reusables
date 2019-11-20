@@ -1,3 +1,5 @@
 .idea/
 target/
 *.iml
+.metadata/
+jdt.ls-java-project/
