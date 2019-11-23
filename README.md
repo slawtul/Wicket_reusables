@@ -12,7 +12,7 @@ Wicket 8.x reusables panels and behaviors for jQuery and Bootstrap 4.x component
 |PopoverBehavior|[Bootstrap Popover](https://getbootstrap.com/docs/4.0/components/popovers/)|:ballot_box_with_check:|![p](screenshots/padding.png)|![popover_image](screenshots/popover_0.png)| 
 |FieldRequiredBehavior|[RedAsteriskBehavior](https://ci.apache.org/projects/wicket/guide/8.x/single.html#_enriching_components_with_behaviors)|:ballot_box_with_check:| |![field_required_image](screenshots/field_required_0.png)|
 |Select2Behavior|[Select2](https://select2.org/)|:clock3:| |![select2_image](screenshots/select2_0.png)|
-|TooltipBehavior|[Bootstrap Tooltip](https://getbootstrap.com/docs/4.0/components/tooltips/)|:clock3:| | |
+|TooltipBehavior|[Bootstrap Tooltip](https://getbootstrap.com/docs/4.0/components/tooltips/)|:clock3:| |![tooltip_image](screenshots/tooltip_0.png)|
 
 ---
 
@@ -23,12 +23,12 @@ __PopoverBehavior__
 ```java
 // Example 1
 // Popover default values: data-trigger='hover', data-placement='right'
-Button button = new Button("register");
+Button button = new Button("Register");
 button.add(new PopoverBehavior("Register user", "Please click to register user");
 ```
 ```java
 // Example 2
-Button button = new Button("register");
+Button button = new Button("Register");
 button.add(new PopoverBehavior()
             .withTitle("Register user")
             .withContent("Please click to register user")
@@ -87,14 +87,30 @@ selectBox.add(new Select2Behavior() {
 });
 ```
 
-## Panels
+---
 
-__Panel name...__
+__TooltipBehavior__
 
-> Description...
+> Relies on the 3rd party library Popper.js for positioning. __You must include popper.min.js before bootstrap.js__
+    
+```java
+// Example 1
+Button button = new Button("Logout");
+button.add(new TooltipBehavior("Do not forget to log out!");
+```
 
 ```java
-...
+// Example 2
+Button button = new Button("Logout");
+button.add(new TooltipBehavior("Do not forget to log out!", Placement.RIGHT);
+```
+
+```java
+// Example 3
+Button button = new Button("Logout");
+button.add(new TooltipBehavior()
+            .withTitle("Do not forget to log out!")
+            .withPlacement(Placement.RIGHT)
 ```
 
 
