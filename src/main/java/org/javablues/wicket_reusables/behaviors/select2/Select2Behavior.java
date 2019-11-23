@@ -14,11 +14,14 @@ public class Select2Behavior extends Behavior {
     public void renderHead(Component component, IHeaderResponse response) {
         super.renderHead(component, response);
         if (component.getMarkupId() == null) {
-            throw new RuntimeException("Select2Behavior cannot be attached. Component does not have a markup id: " + component);
+            throw new RuntimeException("Select2Behavior cannot be attached. " +
+                    "Component does not have a markup id: " + component);
         }
         response.render(OnDomReadyHeaderItem.forScript(appendScript(component)));
-        response.render(CssHeaderItem.forReference(new ContextRelativeResourceReference("webjars/select2/4.0.10/css/select2.css")));
-        response.render(JavaScriptHeaderItem.forReference(new ContextRelativeResourceReference("webjars/select2/4.0.10/js/select2.full.min.js")));
+        response.render(CssHeaderItem.forReference(new ContextRelativeResourceReference(
+                "webjars/select2/4.0.10/css/select2.css")));
+        response.render(JavaScriptHeaderItem.forReference(new ContextRelativeResourceReference(
+                "webjars/select2/4.0.10/js/select2.full.min.js")));
     }
 
     protected Select2Options createSelect2Options(Component component) {

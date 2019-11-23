@@ -12,7 +12,8 @@ public class FieldRequiredBehaviorTest extends WicketBaseTest {
 
     @Test
     public void asteriskMarkupRenderedForRequiredField() {
-        Panel panel = createTestPanel("panelWithField", "<wicket:panel><input type=\"text\" wicket:id=\"field\"/></wicket:panel>");
+        Panel panel = createTestPanel("panelWithField",
+                "<wicket:panel><input type=\"text\" wicket:id=\"field\"/></wicket:panel>");
 
         TextField textField = new TextField("field");
         textField.setRequired(true);
@@ -31,12 +32,15 @@ public class FieldRequiredBehaviorTest extends WicketBaseTest {
                 .append("</wicket:panel>")
                 .append("</span>")
                 .toString();
-        assertEquals("Rendered panel markup does not contain correct asterisk markup", expectedMarkup, actualMarkup);
+
+        assertEquals("Rendered panel markup does not contain correct asterisk markup",
+                expectedMarkup, actualMarkup);
     }
 
     @Test
     public void asteriskMarkupNotRenderedForRegularField() {
-        Panel panel = createTestPanel("panelWithField", "<wicket:panel><input type=\"text\" wicket:id=\"field\"/></wicket:panel>");
+        Panel panel = createTestPanel("panelWithField",
+                "<wicket:panel><input type=\"text\" wicket:id=\"field\"/></wicket:panel>");
 
         TextField textField = new TextField("field");
         textField.setRequired(false);
