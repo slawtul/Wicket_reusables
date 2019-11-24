@@ -18,7 +18,7 @@ Wicket 8.x reusables panels and behaviors for jQuery and Bootstrap 4.x component
 
 __PopoverBehavior__
 
-> Relies on the 3rd party library Popper.js for positioning. __You must include popper.min.js before bootstrap.js__
+> Relies on the 3rd party library Popper.js for positioning. __You must include popper.min.js before bootstrap.min.js__
 
 ```java
 // An example of how to include popper.min.js using webjars maven dependency
@@ -110,7 +110,7 @@ selectBox.add(new Select2Behavior() {
 
 __TooltipBehavior__
 
-> Relies on the 3rd party library Popper.js for positioning. __You must include popper.min.js before bootstrap.js__
+> Relies on the 3rd party library Popper.js for positioning. __You must include popper.min.js before bootstrap.min.js__
 
 ```java
 // An example of how to include popper.min.js using webjars maven dependency
