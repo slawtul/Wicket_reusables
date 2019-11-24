@@ -19,7 +19,26 @@ Wicket 8.x reusables panels and behaviors for jQuery and Bootstrap 4.x component
 __PopoverBehavior__
 
 > Relies on the 3rd party library Popper.js for positioning. __You must include popper.min.js before bootstrap.js__
-    
+
+```java
+// An example of how to include popper.min.js using webjars maven dependency
+public class BaseLayout extends WebPage {
+
+    protected BaseLayout() {}
+
+    @Override
+    public void renderHead(IHeaderResponse response) {
+        super.renderHead(response);
+        response.render(JavaScriptHeaderItem.forReference(new ContextRelativeResourceReference(
+                "webjars/jquery/" + JQUERY_VERSION + "/jquery.min.js")));
+        response.render(JavaScriptHeaderItem.forReference(new ContextRelativeResourceReference(
+                "webjars/popper.js/" + POPPER_VERSION + "/umd/popper.min.js")));
+        response.render(JavaScriptHeaderItem.forReference(new ContextRelativeResourceReference(
+                "webjars/bootstrap/" + BOOTSTRAP_VERSION + "/js/bootstrap.min.js")));
+    }
+}
+```    
+
 ```java
 // Example 1
 // Popover default values: data-trigger='hover', data-placement='right'
@@ -92,6 +111,25 @@ selectBox.add(new Select2Behavior() {
 __TooltipBehavior__
 
 > Relies on the 3rd party library Popper.js for positioning. __You must include popper.min.js before bootstrap.js__
+
+```java
+// An example of how to include popper.min.js using webjars maven dependency
+public class BaseLayout extends WebPage {
+
+    protected BaseLayout() {}
+
+    @Override
+    public void renderHead(IHeaderResponse response) {
+        super.renderHead(response);
+        response.render(JavaScriptHeaderItem.forReference(new ContextRelativeResourceReference(
+                "webjars/jquery/" + JQUERY_VERSION + "/jquery.min.js")));
+        response.render(JavaScriptHeaderItem.forReference(new ContextRelativeResourceReference(
+                "webjars/popper.js/" + POPPER_VERSION + "/umd/popper.min.js")));
+        response.render(JavaScriptHeaderItem.forReference(new ContextRelativeResourceReference(
+                "webjars/bootstrap/" + BOOTSTRAP_VERSION + "/js/bootstrap.min.js")));
+    }
+}
+``` 
     
 ```java
 // Example 1
