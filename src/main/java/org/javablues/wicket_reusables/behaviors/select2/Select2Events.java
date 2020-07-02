@@ -15,7 +15,7 @@ public enum Select2Events {
     SELECT2_CLEARING("select2:clearing"),
     SELECT2_CLEAR("select2:clear");
 
-    private String eventName;
+    final private String eventName;
 
     Select2Events(String eventName) {
         this.eventName = eventName;

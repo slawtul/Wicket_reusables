@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Select2OnEvent implements Serializable {
 
-    private StringBuilder events = new StringBuilder();
+    final private StringBuilder events = new StringBuilder();
 
     public Select2OnEvent() {
     }
