@@ -14,12 +14,14 @@ public class Select2OnEvent implements Serializable {
     }
 
     public Select2OnEvent onEvent(String event, String function) {
-        events.append(".on('").append(event).append("', ").append(function).append(")");
+        events.append(".on('").append(event).append("', ")
+                .append(function).append(")");
         return this;
     }
 
     public Select2OnEvent onEvent(Select2Events event, String function) {
-        events.append(".on('").append(event).append("', ").append(function).append(")");
+        events.append(".on('").append(event).append("', ")
+                .append(function).append(")");
         return this;
     }
 }

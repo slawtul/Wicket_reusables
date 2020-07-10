@@ -51,8 +51,10 @@ public class Select2Options implements Serializable {
         if (!dropdownParent.equalsIgnoreCase("$(document.body)")) {
             options.append("dropdownParent:").append(dropdownParent).append(",");
         }
-        if (!width.equalsIgnoreCase("resolve")) options.append("width:'").append(width).append("',");
-        if (!theme.equalsIgnoreCase("default")) options.append("theme:'").append(theme).append("',");
+        if (!width.equalsIgnoreCase("resolve"))
+            options.append("width:'").append(width).append("',");
+        if (!theme.equalsIgnoreCase("default"))
+            options.append("theme:'").append(theme).append("',");
         if (containerCssClass != null) {
             options.append("containerCssClass:'").append(containerCssClass).append("',");
         }

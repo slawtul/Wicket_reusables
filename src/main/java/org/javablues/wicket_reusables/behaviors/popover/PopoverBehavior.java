@@ -44,18 +44,42 @@ public class PopoverBehavior extends Behavior {
         super.onComponentTag(component, tag);
         tag.append("data-toggle", "popover", "");
 
-        if (title != null) tag.append("title", title, "");
-        if (content != null) tag.append("data-content", content, "");
-        if (trigger != null) tag.append("data-trigger", trigger.toString(), "");
-        if (placement != null) tag.append("data-placement", placement.toString(), "");
-        if (selector != null) tag.append("data-selector", selector, "");
-        if (container != null) tag.append("data-container", container, "");
-        if (template != null) tag.append("data-template", template, "");
-        if (boundary != null) tag.append("data-boundary", boundary, "");
-        if (delay != 0) tag.append("data-delay", Integer.toString(delay), "");
-        if (offset != 0) tag.append("data-offset", Integer.toString(offset), "");
-        if (!animation) tag.append("data-animation", "false", "");
-        if (html) tag.append("data-html", "true", "");
+        if (title != null) {
+            tag.append("title", title, "");
+        }
+        if (content != null) {
+            tag.append("data-content", content, "");
+        }
+        if (trigger != null) {
+            tag.append("data-trigger", trigger.toString(), "");
+        }
+        if (placement != null) {
+            tag.append("data-placement", placement.toString(), "");
+        }
+        if (selector != null) {
+            tag.append("data-selector", selector, "");
+        }
+        if (container != null) {
+            tag.append("data-container", container, "");
+        }
+        if (template != null) {
+            tag.append("data-template", template, "");
+        }
+        if (boundary != null) {
+            tag.append("data-boundary", boundary, "");
+        }
+        if (delay != 0) {
+            tag.append("data-delay", Integer.toString(delay), "");
+        }
+        if (offset != 0) {
+            tag.append("data-offset", Integer.toString(offset), "");
+        }
+        if (!animation) {
+            tag.append("data-animation", "false", "");
+        }
+        if (html) {
+            tag.append("data-html", "true", "");
+        }
     }
 
     private String enablePopovers() {
