@@ -8,7 +8,6 @@ import org.apache.wicket.markup.head.OnDomReadyHeaderItem;
 import org.javablues.wicket_reusables.behaviors.shared.Placement;
 
 public class PopoverBehavior extends Behavior {
-
     private String title;
     private String content;
     private String template;

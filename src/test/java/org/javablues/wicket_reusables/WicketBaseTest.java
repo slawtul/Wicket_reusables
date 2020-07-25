@@ -6,7 +6,6 @@ import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Before;
 
 public class WicketBaseTest {
-
     protected WicketTester tester;
 
     @Before

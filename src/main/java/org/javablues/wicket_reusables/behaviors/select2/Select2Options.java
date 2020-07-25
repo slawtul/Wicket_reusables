@@ -9,7 +9,6 @@ import java.io.Serializable;
  * </p>
  */
 public class Select2Options implements Serializable {
-
     private String dropdownParent = "$(document.body)";
     private String width = "resolve";
     private String theme = "default";
@@ -47,55 +46,93 @@ public class Select2Options implements Serializable {
     protected String getOptions() {
         StringBuilder options = new StringBuilder();
         options.append("{");
-
         if (!dropdownParent.equalsIgnoreCase("$(document.body)")) {
-            options.append("dropdownParent:").append(dropdownParent).append(",");
+            options.append("dropdownParent:").append(dropdownParent)
+                .append(",");
         }
-        if (!width.equalsIgnoreCase("resolve"))
+        if (!width.equalsIgnoreCase("resolve")) {
             options.append("width:'").append(width).append("',");
-        if (!theme.equalsIgnoreCase("default"))
+        }
+        if (!theme.equalsIgnoreCase("default")) {
             options.append("theme:'").append(theme).append("',");
+        }
         if (containerCssClass != null) {
-            options.append("containerCssClass:'").append(containerCssClass).append("',");
+            options.append("containerCssClass:'").append(containerCssClass)
+                .append("',");
         }
         if (dropdownCssClass != null) {
-            options.append("dropdownCssClass:'").append(dropdownCssClass).append("',");
+            options.append("dropdownCssClass:'").append(dropdownCssClass)
+                .append("',");
         }
-        if (!closeOnSelect) options.append("closeOnSelect:").append(false).append(",");
-        if (dropdownAutoWidth) options.append("dropdownAutoWidth:").append(true).append(",");
-        if (debug) options.append("debug:").append(true).append(",");
-        if (disabled) options.append("disabled:").append(true).append(",");
-        if (scrollAfterSelect) options.append("scrollAfterSelect:").append(true).append(",");
-        if (!selectOnClose) options.append("selectOnClose:").append(true).append(",");
+        if (!closeOnSelect) {
+            options.append("closeOnSelect:").append(false).append(",");
+        }
+        if (dropdownAutoWidth) {
+            options.append("dropdownAutoWidth:").append(true).append(",");
+        }
+        if (debug) {
+            options.append("debug:").append(true).append(",");
+        }
+        if (disabled) {
+            options.append("disabled:").append(true).append(",");
+        }
+        if (scrollAfterSelect) {
+            options.append("scrollAfterSelect:").append(true).append(",");
+        }
+        if (!selectOnClose) {
+            options.append("selectOnClose:").append(true).append(",");
+        }
         if (minimumResultsForSearch != 0) {
-            options.append("minimumResultsForSearch:").append(minimumResultsForSearch).append(",");
+            options.append("minimumResultsForSearch:")
+                .append(minimumResultsForSearch).append(",");
         }
         if (minimumInputLength != 0) {
-            options.append("minimumInputLength:").append(minimumInputLength).append(",");
+            options.append("minimumInputLength:").append(minimumInputLength)
+                .append(",");
         }
         if (maximumInputLength != 0) {
-            options.append("maximumInputLength:").append(maximumInputLength).append(",");
+            options.append("maximumInputLength:").append(maximumInputLength)
+                .append(",");
         }
         if (maximumSelectionLength != 0) {
-            options.append("maximumSelectionLength:").append(maximumSelectionLength).append(",");
+            options.append("maximumSelectionLength:")
+                .append(maximumSelectionLength).append(",");
         }
-
         if (templateResult != null) {
-            options.append("templateResult:").append(templateResult).append(",");
+            options.append("templateResult:").append(templateResult)
+                .append(",");
         }
         if (templateSelection != null) {
-            options.append("templateSelection:").append(templateSelection).append(",");
+            options.append("templateSelection:").append(templateSelection)
+                .append(",");
         }
-        if (sorter != null) options.append("sorter:").append(sorter).append(",");
-        if (matcher != null) options.append("matcher:").append(matcher).append(",");
-        if (escapeMarkup != null) options.append("escapeMarkup:").append(escapeMarkup).append(",");
-        if (data != null) options.append("data:").append(data).append(",");
-        if (ajax != null) options.append("ajax:").append(ajax).append(",");
-        if (containerCss != null) options.append("containerCss:").append(containerCss).append(",");
-        if (dropdownCss != null) options.append("dropdownCss:").append(dropdownCss).append(",");
-        if (language != null) options.append("language:").append(language).append(",");
-        if (placeholder != null) options.append("placeholder:").append(placeholder).append(",");
-
+        if (sorter != null) {
+            options.append("sorter:").append(sorter).append(",");
+        }
+        if (matcher != null) {
+            options.append("matcher:").append(matcher).append(",");
+        }
+        if (escapeMarkup != null) {
+            options.append("escapeMarkup:").append(escapeMarkup).append(",");
+        }
+        if (data != null) {
+            options.append("data:").append(data).append(",");
+        }
+        if (ajax != null) {
+            options.append("ajax:").append(ajax).append(",");
+        }
+        if (containerCss != null) {
+            options.append("containerCss:").append(containerCss).append(",");
+        }
+        if (dropdownCss != null) {
+            options.append("dropdownCss:").append(dropdownCss).append(",");
+        }
+        if (language != null) {
+            options.append("language:").append(language).append(",");
+        }
+        if (placeholder != null) {
+            options.append("placeholder:").append(placeholder).append(",");
+        }
         options.append("}");
         return options.toString();
     }
@@ -145,7 +182,8 @@ public class Select2Options implements Serializable {
         return this;
     }
 
-    public Select2Options withMinimumResultsForSearch(int minimumResultsForSearch) {
+    public Select2Options withMinimumResultsForSearch(
+        int minimumResultsForSearch) {
         this.minimumResultsForSearch = minimumResultsForSearch;
         return this;
     }
@@ -160,7 +198,8 @@ public class Select2Options implements Serializable {
         return this;
     }
 
-    public Select2Options withMaximumSelectionLength(int maximumSelectionLength) {
+    public Select2Options withMaximumSelectionLength(
+        int maximumSelectionLength) {
         this.maximumSelectionLength = maximumSelectionLength;
         return this;
     }

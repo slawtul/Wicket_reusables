@@ -1,7 +1,6 @@
 package org.javablues.wicket_reusables.behaviors.select2;
 
 public enum Select2Events {
-
     CHANGE("change"),
     CHANGE_SELECT2("change.select2"),
     SELECT2_CLOSING("select2:closing"),
@@ -23,6 +22,6 @@ public enum Select2Events {
 
     @Override
     public String toString() {
-        return eventName.toString();
+        return eventName;
     }
 }
