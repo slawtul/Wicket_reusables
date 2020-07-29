@@ -14,12 +14,12 @@ Wicket 8.x reusables panels and behaviors for jQuery and Bootstrap 4.x component
 |Select2Behavior|[Select2](https://select2.org/)|:clock3:| |![select2_image](screenshots/select2_0.png)|
 |TooltipBehavior|[Bootstrap Tooltip](https://getbootstrap.com/docs/4.0/components/tooltips/)|:clock3:| |![tooltip_image](screenshots/tooltip_0.png)|
 
-### jQuery and Bootstrap libs
+### Bootstrap lib
 
-Before you start using behaviors please include jQuery and Bootstrap libraries
+Before you start using behaviors please include Bootstrap library
 
 ```java
-// An example of how to include jquery.min.js and bootstrap.min.js using webjars maven dependency
+// An example of how to include bootstrap.js using webjars maven dependency
 public class BaseLayout extends WebPage {
 
     protected BaseLayout() {}
@@ -28,9 +28,7 @@ public class BaseLayout extends WebPage {
     public void renderHead(IHeaderResponse response) {
         super.renderHead(response);
         response.render(JavaScriptHeaderItem.forReference(new ContextRelativeResourceReference(
-                "webjars/jquery/" + JQUERY_VERSION + "/jquery.min.js")));
-        response.render(JavaScriptHeaderItem.forReference(new ContextRelativeResourceReference(
-                "webjars/bootstrap/" + BOOTSTRAP_VERSION + "/js/bootstrap.min.js")));
+                "webjars/bootstrap/" + BOOTSTRAP_VERSION + "/js/bootstrap.js")));
     }
 }
 ``` 
@@ -50,8 +48,6 @@ public class BaseLayout extends WebPage {
     @Override
     public void renderHead(IHeaderResponse response) {
         super.renderHead(response);
-        response.render(JavaScriptHeaderItem.forReference(new ContextRelativeResourceReference(
-                "webjars/jquery/" + JQUERY_VERSION + "/jquery.min.js")));
         response.render(JavaScriptHeaderItem.forReference(new ContextRelativeResourceReference(
                 "webjars/popper.js/" + POPPER_VERSION + "/umd/popper.min.js")));
         response.render(JavaScriptHeaderItem.forReference(new ContextRelativeResourceReference(
